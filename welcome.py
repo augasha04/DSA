@@ -23,4 +23,5 @@ def greet(language):
         return greetings[language]
     else:
         return greetings['english']
-#         print("Welcome")
+    
+print("Welcome")

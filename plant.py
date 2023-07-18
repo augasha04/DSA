@@ -6,3 +6,4 @@
 
 # Example
 # For upSpeed = 100, downSpeed = 10 and desiredHeight = 910, the output should be 10.
+

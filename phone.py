@@ -1,8 +1,21 @@
-# Think of a way to store the languages as a database (eg an object).
-# The languages are listed below so you can copy and paste!
-# Write a 'welcome' function that takes a parameter 'language' (always a string), 
-# and returns a greeting - if you have it in your database.
-# It should default to English if the language is not in the database, 
-# or in the event of an invalid input.
+# Define two functions, isValidHKPhoneNumber and hasValidHKPhoneNumber,
+# that returns whether a given string is
+# a valid HK phone number and contains a valid HK phone number
+# respectively (i.e. true/false values).
 
+def is_valid_HK_phone_number(number):
+    if len(number) != 9:
+        return False
+    if number[4] != ' ':
+        return False
+    if not number[:4].isdigit() or not number[5:].isdigit():
+        return False
+    return True
+def has_valid_HK_phone_number(string):
+    # Search for valid HK phone number pattern within the string
+    for i in range(len(string) - 8):
+        number = string[i:i+9]
+        if is_valid_HK_phone_number(number):
+            return True
+    return False
 

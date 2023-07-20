@@ -43,3 +43,18 @@
 # M is an integer within the range [1..2,000];
 # each element of S consists only of lowercase English letters (a-z);
 # N * M ≤ 30,000.
+
+def solution(S):
+    #Check if there is any pair of strings that share a common letter.
+    for i in range(len(S)):
+        for j in range(i + 1, len(S)):
+            for k in range(len(S[0])):
+                if S[i][k] == S[j][k]:
+                    return[i, j]
+                    
+    #If no pair of the strings exists, return an empty arrary.
+    return[]
+    
+if __name__ == "__main__":
+    S = ["abc", "bca", "dbe"]
+    print(solution(S))
